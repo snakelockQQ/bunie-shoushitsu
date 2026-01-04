@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>文意消失変換</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>文意消失変換</h1>
+    <div class="description">
+      入力したテキストの漢字とカタカナ、ひらがなのバランスを保ったままランダム化して文意を消します
+    </div>
+
+    <!-- 入力：クリア -->
+    <div class="button-row right">
+      <button id="clearInput">クリア</button>
+    </div>
+
+    <!-- 入力欄 -->
+    <textarea id="inputText" placeholder="ここに原文を貼る"></textarea>
+
+    <!-- 変換ボタン群 -->
+    <div class="button-row split">
+      <div class="btn-group-left">
+        <button id="convertKanji">漢字のみ変換</button>
+        <button id="convertHira">ひらがなのみ変換</button>
+        <button id="convertKata">カタカナのみ変換</button>
+        <button id="convertAlpha">英字のみ変換</button>
+      </div>
+      <div class="btn-group-right">
+        <button id="convertAll" class="primary">一括変換</button>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- 出力欄 -->
+    <textarea id="outputText" placeholder="変換結果がここに出る" readonly></textarea>
+
+    <!-- 出力操作 -->
+    <div class="button-row three">
+      <div class="left">
+        <button id="regen">再生成</button>
+      </div>
+      <div class="center">
+        <button id="moveToInput">生成内容を入力欄に移行</button>
+      </div>
+      <div class="right">
+        <button id="copy">コピー</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
